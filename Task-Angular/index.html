@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+        <script src="script.js"></script>
+        <script src="task.js"></script>
+        <script src="taskRepo.js"></script>
+    </head>
+    <body ng-app='taskManager'>
+        <div ng-controller="TaskController as ctrl">
+            <div ng-repeat="task in ctrl.tasks">
+                <input type='checkbox' 
+                       ng-checked='task.completed' 
+                       ng-click='task.complete()'>
+                           {{task.name}}
+            </div>
+        </div>
+    </body>
+</html>
